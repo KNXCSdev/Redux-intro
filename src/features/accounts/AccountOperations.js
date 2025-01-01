@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { deposit, payLoan, requestLoan, withdrawal } from "./accountSlice";
+import { deposit, payLoan, requestLoan, withdraw } from "./accountSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 function AccountOperations() {
@@ -26,7 +26,7 @@ function AccountOperations() {
 
   function handleWithdrawal() {
     if (!withdrawalAmount) return;
-    dispatch(withdrawal(withdrawalAmount));
+    dispatch(withdraw(withdrawalAmount));
     setWithdrawalAmount("");
   }
 
